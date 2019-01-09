@@ -14,6 +14,7 @@ import renderHTML from 'react-render-html';
 
 import NavigationEdit from './NavigationEdit';
 import Recommendations from './Recommendations';
+import TsneMap from './TsneMap';
 import EditCtl from './editCtl';
 import { Button, Icon, Image, Modal } from 'semantic-ui-react'
 const urlDelim = '>>';
@@ -93,6 +94,7 @@ export default class Item extends Component{
         </Modal.Header>
         <Modal.Content image>
           <Image wrapped size='large' src={src} />
+          <TsneMap></TsneMap>
           <Modal.Description>
             { fields }
             { item.Recommendations && item.Recommendations.length > 0 &&
